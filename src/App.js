@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { IonPhaser } from '@ion-phaser/react'
+import game from './game/game';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    initialize: false,
+    game: game
+  }
+
+  render() {
+    const { initialize, game } = this.state;
+    return (
+      <div>
+        <h1>Games are Fun</h1>
+
+        <IonPhaser game={game} initialize={initialize} />
+      </div>
+    )
+  }
 }
+
 
 export default App;
