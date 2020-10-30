@@ -28,7 +28,7 @@
     {
       "columns": 24,
       "firstgid": 1,
-      "image": "tuxmon-sample.png",
+      "image": "./tuxmon-sample.png",
       "imageheight": 480,
       "imagewidth": 384,
       "margin": 0,
@@ -56,3 +56,4 @@
   "type": "map",
   "version": 1.4,
   "width": 20
+}
